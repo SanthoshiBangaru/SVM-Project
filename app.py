@@ -35,6 +35,103 @@ log(f"Cleaned Directory: {CLEAN_DIR}")
 
 # Page Configuration
 st.set_page_config("End to End SVM", layout = 'wide')
+def load_css():
+    st.markdown("""
+    <style>
+    /* ===== App Background ===== */
+    .stApp {
+        background: linear-gradient(135deg, #eef2ff, #f8fafc);
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* ===== Main Title ===== */
+    h1 {
+        color: #1e1b4b;
+        font-weight: 700;
+    }
+
+    /* ===== Section Headers ===== */
+    h2, h3 {
+        color: #312e81;
+        font-weight: 600;
+        margin-top: 1.2rem;
+    }
+
+    /* ===== Cards for Sections ===== */
+    .block-container {
+        padding-top: 2rem;
+    }
+
+    /* ===== Buttons ===== */
+    .stButton > button {
+        background: linear-gradient(135deg, #6366f1, #4338ca);
+        color: white;
+        border-radius: 10px;
+        padding: 0.55em 1.3em;
+        font-weight: 600;
+        border: none;
+    }
+
+    .stButton > button:hover {
+        background: linear-gradient(135deg, #4f46e5, #3730a3);
+        box-shadow: 0 6px 16px rgba(67,56,202,0.35);
+        transform: scale(1.02);
+    }
+
+    /* ===== Sidebar Styling ===== */
+    section[data-testid="stSidebar"] {
+        background: linear-gradient(180deg, #0f172a, #1e293b);
+    }
+
+    section[data-testid="stSidebar"] h2,
+    section[data-testid="stSidebar"] label {
+        color: #e5e7eb;
+        font-weight: 600;
+    }
+
+    /* ===== DataFrames ===== */
+    .stDataFrame {
+        background-color: white;
+        border-radius: 12px;
+        padding: 6px;
+    }
+
+    /* ===== Success / Info Boxes ===== */
+    .stSuccess {
+        background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+        border-radius: 12px;
+        color: #14532d;
+    }
+
+    .stInfo {
+        background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+        border-radius: 12px;
+        color: #1e1b4b;
+    }
+
+    /* ===== Warning / Error ===== */
+    .stWarning {
+        background: linear-gradient(135deg, #fef3c7, #fde68a);
+        border-radius: 12px;
+    }
+
+    .stError {
+        background: linear-gradient(135deg, #fee2e2, #fecaca);
+        border-radius: 12px;
+    }
+
+    /* ===== Metrics / Accuracy Text ===== */
+    .metric {
+        font-size: 28px;
+        font-weight: 700;
+        color: #15803d;
+        text-align: center;
+    }
+
+    </style>
+    """, unsafe_allow_html=True)
+
+load_css()
 st.title("End-to-end SVM Platform")
 
 # Side bar : model settings
